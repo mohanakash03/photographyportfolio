@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const person={
+        //     name:"Ram",age:25,
+        //     name:"Mohan",age:22,
+        //     greet:function(){
+        //         console.log("Hello"+this.name);
+        //     }
+        // }
+
+        // person.greet();
+
+        class Person{
+            constructor(name,dept,percent){
+                this.name=name;this.dept=dept;this.percent=percent;
+            }
+            fun(){
+                console.log(`Hello I m ${this.name} I m from ${this.dept} department  My CGPA is ${this.percent}`);
+            }
+        }
+
+        const person1=new Person ("Mohan","Mechanical","85")
+        const person2=new Person ("Kamalesh","ECE","78")
+
+        person1.fun();
+        person2.fun();
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="d1" style="width: 100px;height: 100px;background-color: aqua;">
+
+    </div>
+    <div>
+        <button id="show">Show</button>
+    </div>
+
+    <div>
+        <button id="hide">Hide</button>
+    </div>
+
+</body>
+<script>
+ $( document ).ready(function() {
+    
+// Event setup using a convenience method
+$( "#show" ).click(function() {
+   $("#d1").hide()
+});
+$( "#hide" ).click(function() {
+   $("#d1").show()
+});
+});
+
+</script>
+</html>

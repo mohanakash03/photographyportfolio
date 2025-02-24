@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .main{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        /* grid-template-rows: repeat(3,1fr); */
+        grid-template-areas: "h h h" "d a a" "f f f";
+        gap: 40px;
+        background-color: palevioletred;
+        text-align: center;
+        font-size: x-large;
+
+
+    }
+    img{
+        height: 100px;
+        width: 100px;
+        padding-top: 170px;
+        gap: 30px;
+
+    }
+    .header{
+        grid-area: h;
+        background-color: red;
+        height: 80px;
+        
+    }
+    .footer{
+        grid-area: f;
+        background-color: blue;
+        height: 80px;
+        
+    }
+    .article{
+        grid-area: a;
+        background-color: green;
+        height: 300px;
+        width: 640px;
+        margin-right: 15px;
+    }
+    
+    .aside{
+        grid-area: d;
+        background-color: pink;
+        height: 300px;
+        width: 500px;
+        margin-left: 15px;
+    }
+    
+</style>
+</head>
+<body>
+    
+    <div class="main">
+    <div class="header">Header</div>
+    <div class="aside">aside</div>
+    <div class="article">
+        <div>article</div> 
+        <img src="1.jpeg" alt="image">
+        <img src="2.png" alt="image">
+        <img src="gm.jpg" alt="image">
+    </div>
+    <div class="footer">footer</div>
+
+    </div>
+</body>
+</html>

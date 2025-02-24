@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5,1fr);
+            grid-template-areas: "p p p clear" "one two three division" "four five six subt" "seven eight nine addition" "decimal zero equal multiply";
+            gap: 10px;
+        }
+        .p{
+            grid-area: p;
+
+            background-color: red;
+        }
+        .a{
+            grid-area: clear;
+            background-color: blue;
+        }
+        .b{
+            grid-area: one;
+            background-color: green;
+        }
+        .c{
+            grid-area: two;
+            background-color: yellow;
+        }
+        .d{
+            grid-area: three;
+            background-color: brown;
+        }
+        .e{
+            grid-area: division;
+            background-color: chartreuse;
+        }
+        .f{
+            grid-area: four;
+            background-color: coral; 
+        }
+        .g{
+            grid-area: five;
+            background-color:darkviolet ;
+        }
+        .h{
+            grid-area: six;
+            background-color: greenyellow;
+        }
+        .i{
+            grid-area: subt;
+            background-color: darkorchid;
+        }
+        .j{
+            grid-area: seven;
+            background-color:dimgray ;
+        }
+        .k{
+            grid-area: eight;
+            background-color: lightseagreen;
+        }
+        .l{
+            grid-area: nine;
+            background-color: aquamarine;
+        }
+        .m{
+            grid-area: addition;
+            background-color: gold;
+        }
+        .n{
+            grid-area: decimal;
+            background-color:bisque ;
+        }
+        .o{
+            grid-area: zero;
+            background-color: aqua;
+        }
+        .q{
+            grid-area: equal;
+            background-color: navy;
+        }
+        .r{
+            grid-area: multiply;
+            background-color: mediumturquoise;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .p{
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <p class="p"><input type="text" name="" id="text"></p>
+        <div class="a box"><input type="button" value="" onclick="reset()">C</div>
+        <div class="b box"><input type="button" onclick="display('1')" value="1">1</div>
+        <div class="c box"><input type="button" onclick="display('2')" value="2">2</div>
+        <div class="d box"><input type="button" onclick="display('3')" value="3">3</div>
+        <div class="e box"><input type="button" onclick="display('/')" value="/" id="divi">/</div>
+        <div class="f box"><input type="button" onclick="display('4')" value="4">4</div>
+        <div class="g box"><input type="button" onclick="display('5')" value="5">5</div>
+        <div class="h box"><input type="button" onclick="display('6')" value="6">6</div>
+        <div class="i box"><input type="button" onclick="display('-')" value="-" id="subt">-</div>
+        <div class="j box"><input type="button" onclick="display('7')" value="7">7</div>
+        <div class="k box"><input type="button" onclick="display('8')" value="8">8</div>
+        <div class="l box"><input type="button" onclick="display('9')" value="9">9</div>
+        <div class="m box"><input type="button" onclick="display('+')" value="+" id="add">+</div>
+        <div class="n box"><input type="button" onclick="display('.')" value=".">.</div>
+        <div class="o box"><input type="button" onclick="display('0')" value="0">0</div>
+        <div class="q box"><input type="button" onclick="solve()" value="=">=</div>
+        <div class="r box"><input type="button" onclick="display('*')" value="*" id="mult">*</div>
+        <div class="s box"><input type="button" value="" onclick="remove()">Clear</div>
+    </div>
+
+    <script>
+        function display(val){
+            document.getElementById("text").value+=val
+        }
+        function solve(){
+           let x= document.getElementById("text").value
+           let y=eval(x)
+           document.getElementById("text").value=y
+        }
+        function reset(){
+            document.getElementById("text").value=" "
+        }
+        function remove(){
+            let z =document.getElementById("text").value
+            x=z.substring(0,z.length-1)
+            document.getElementById("text").value=x
+        }
+    </script>
+   
+</body>
+</html>
